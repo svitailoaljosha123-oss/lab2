@@ -1,3 +1,11 @@
+:root{
+    --navbar-colour: #164258
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
 body.ans-page {
     background-image: url('media/background.png');
     background-size: 1920px;
@@ -178,7 +186,7 @@ body {
     padding: 10px 14px;
     box-sizing: border-box;
     border-radius: 6px;
-    background: #164258;
+    background: var(-navbar-colour);
     color: #fff;
 }
 
@@ -196,4 +204,30 @@ body {
     padding: 15px 30px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: var(--navbar-colour);
+    padding: 0.5rem;
+    box-shadow: 5px 5px 5px grey;
+    text-wrap: unset;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--navbar-colour);
 }
